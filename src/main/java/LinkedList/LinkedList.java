@@ -100,6 +100,10 @@ public class LinkedList {
             }
             Node currentNode = previousNode.getNext();
             Node nextNode = currentNode.getNext();
+
+            previousNode.setNext(nextNode);
+            currentNode.setNext(null);
+            size--;
         }
     }
 
